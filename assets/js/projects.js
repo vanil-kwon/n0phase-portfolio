@@ -6,12 +6,12 @@
 export const projects = [
   {
     title: "REACTION SNAKE",
-    category: "Game · Browser",
+    category: "NIFIR · Game · Browser",
     year: "2026",
-    description: "Браузерная игра на реакцию с пятью режимами, достижениями, скинами, локальным прогрессом и поддержкой PWA.",
+    description: "Первая игра, разработанная в рамках NIFIR: браузерная игра на реакцию с пятью режимами, достижениями, скинами и поддержкой PWA.",
     logo: "https://raw.githubusercontent.com/vanil-kwon/reaction-snake/main/site/icon.svg",
     mark: "RS",
-    group: "personal",
+    group: "nifir",
     url: "https://vanil-kwon.github.io/reaction-snake/",
     repo: "https://github.com/vanil-kwon/reaction-snake",
     status: "Опубликован",
