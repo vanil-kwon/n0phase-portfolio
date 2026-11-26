@@ -3,94 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b090b">
-  <meta name="description" content="n0phase — Frontend-разработчик. Создаю современные сайты и цифровые интерфейсы.">
-  <title>n0phase — Frontend Developer</title>
+  <meta name="theme-color" content="#090809">
+  <meta name="description" content="n0phase — Frontend Developer. Разработка сайтов, цифровые интерфейсы и собственные проекты.">
+  <meta property="og:title" content="n0phase — Code. Design. Create.">
+  <meta property="og:description" content="Персональное портфолио Frontend-разработчика.">
+  <meta property="og:type" content="website">
+  <title>n0phase — Code. Design. Create.</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{color-scheme:dark;--bg:#0b090b;--panel:#130f12;--card:#191216;--red:#e32636;--red2:#ff4655;--text:#f5f1f2;--muted:#a99aa0;--line:#35232a;--mono:"DM Mono",monospace;--sans:"Manrope",sans-serif}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit}
-    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 82% 10%,#5b101b24,transparent 35%),radial-gradient(ellipse at 8% 55%,#a8172510,transparent 35%);background-repeat:no-repeat}
-    .wrap{width:min(1120px,calc(100% - 44px));margin:auto}.mono,.eyebrow,.nav a,.tag,.number{font-family:var(--mono)}.eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--red2);display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:22px;height:1px;background:var(--red)}
-    header{position:sticky;top:0;z-index:20;background:#0b090be8;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff0d}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;font-size:23px;letter-spacing:-.07em}.brand span{color:var(--red2)}.navlinks{display:flex;gap:30px;align-items:center}.nav a{font-size:12px;color:var(--muted);transition:.2s}.nav a:hover{color:var(--red2)}.nav .nav-cta{padding:10px 15px;border:1px solid var(--red);border-radius:4px;color:var(--text)}.menu{display:none;background:none;border:1px solid var(--line);color:white;padding:8px 11px;border-radius:4px}
-    .hero{min-height:690px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:40px;padding:90px 0 100px;position:relative}.hero h1{font-size:clamp(54px,8vw,104px);line-height:.98;letter-spacing:-.085em;margin:24px 0}.hero h1 span{color:var(--red2)}.lead{max-width:540px;color:var(--muted);font-size:17px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border:1px solid var(--line);border-radius:4px;font-size:13px;font-weight:700;transition:.2s}.btn.primary{background:var(--red);border-color:var(--red);color:white;box-shadow:0 8px 35px #e326362b}.btn:hover{transform:translateY(-3px);border-color:var(--red2)}.hero-meta{display:flex;gap:26px;margin-top:56px;color:var(--muted);font:11px var(--mono);text-transform:uppercase;letter-spacing:.08em}.hero-meta b{color:var(--text);font-weight:500}.visual{height:420px;position:relative;display:grid;place-items:center}.orbit{width:min(340px,75vw);aspect-ratio:1;border:1px solid #e3263640;border-radius:50%;display:grid;place-items:center;position:relative;box-shadow:0 0 100px #e3263610,inset 0 0 70px #e326360b}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #e326362b;border-radius:50%;inset:25px}.orbit:after{inset:55px}.core{font-size:100px;font-weight:800;letter-spacing:-.12em;color:var(--text);text-shadow:0 0 45px #e3263666}.core span{color:var(--red)}.orbit-label{position:absolute;bottom:15px;right:-20px;background:var(--card);border:1px solid var(--line);padding:12px 16px;font:11px var(--mono);color:var(--muted)}.cross{position:absolute;width:8px;height:8px;background:var(--red2);box-shadow:0 0 18px var(--red);border-radius:50%;top:16%;right:19%}
-    section{padding:100px 0;border-top:1px solid #ffffff0c}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:42px}.section-head h2{font-size:clamp(34px,5vw,56px);letter-spacing:-.07em;line-height:1.05;margin:12px 0 0}.section-head p{max-width:350px;color:var(--muted);font-size:13px;margin:0}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.about-card,.project,.skill-card,.contact-card{background:linear-gradient(145deg,#191216,#100d10);border:1px solid var(--line);border-radius:7px;padding:28px}.about-card p{color:var(--muted);font-size:14px}.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{padding:20px;background:#0d0a0c;border:1px solid #ffffff0c;border-radius:5px}.stat strong{font-size:28px;color:var(--red2);letter-spacing:-.06em;display:block}.stat span{font:10px var(--mono);color:var(--muted);text-transform:uppercase}
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{padding:0;overflow:hidden;transition:.25s}.project:hover{transform:translateY(-5px);border-color:#a92b3b}.project-art{height:190px;background:linear-gradient(135deg,#291018,#100c10);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.project-art:before{content:"";position:absolute;width:210px;height:210px;border:1px solid #e3263650;border-radius:50%;box-shadow:0 0 0 25px #e3263608,0 0 0 55px #e3263606}.project-art strong{font-size:36px;letter-spacing:-.08em;z-index:1}.project-art strong span{color:var(--red2)}.project-body{padding:24px}.project-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.project h3{margin:0;font-size:19px}.status{font:10px var(--mono);color:var(--red2);border:1px solid #e3263655;padding:5px 8px;border-radius:3px}.project p{color:var(--muted);font-size:13px;min-height:42px}.tags{display:flex;gap:7px;flex-wrap:wrap}.tag{font-size:10px;color:#c6b5bb;border:1px solid var(--line);padding:5px 8px;border-radius:3px}
-    .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.skill-card{padding:20px}.skill-card .number{font-size:11px;color:var(--red2)}.skill-card h3{font-size:15px;margin:12px 0 5px}.skill-card p{font-size:12px;color:var(--muted);margin:0}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-card h3{font-size:25px;letter-spacing:-.05em;margin:8px 0}.contact-card p{font-size:13px;color:var(--muted)}.contact-links{display:grid;gap:10px;margin-top:22px}.contact-links a{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line);font:12px var(--mono);color:var(--muted);transition:.2s}.contact-links a:hover{color:var(--red2)}.contact-links span{color:var(--text)}
-    footer{padding:28px 0;border-top:1px solid #ffffff10;color:var(--muted);font:10px var(--mono);display:flex;justify-content:space-between;gap:15px}.redline{height:2px;background:linear-gradient(90deg,var(--red),transparent);width:100%;opacity:.8}
-    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:80px 0 70px;min-height:auto}.visual{height:300px;grid-row:1}.hero-copy{grid-row:2}.orbit{width:260px}.core{font-size:76px}.navlinks{display:none;position:absolute;top:76px;left:0;right:0;padding:20px 22px 24px;background:#0b090b;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:20px}.navlinks.open{display:flex}.menu{display:block}.about-grid,.contact-grid{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}section{padding:75px 0}.section-head{align-items:flex-start;flex-direction:column}.hero-meta{margin-top:38px}}
-    @media(max-width:560px){.wrap{width:min(100% - 32px,1120px)}.projects{grid-template-columns:1fr}.project-art{height:160px}.hero h1{font-size:clamp(52px,17vw,78px)}.hero-meta{gap:15px;flex-wrap:wrap}.skills{grid-template-columns:1fr 1fr}.about-card{padding:22px}.stat{padding:15px}.stat strong{font-size:24px}footer{flex-direction:column}}
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
-  </style>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#home" aria-label="n0phase — на главную">n0<span>phase</span></a>
-      <nav class="navlinks" id="navlinks" aria-label="Основная навигация">
-        <a href="#about">ОБО МНЕ</a><a href="#projects">ПРОЕКТЫ</a><a href="#skills">НАВЫКИ</a><a href="#contact" class="nav-cta">СВЯЗАТЬСЯ ↗</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#home" aria-label="n0phase — главная">
+        <span class="brand-symbol">n0</span><span class="brand-word">n0<span>phase</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">МЕНЮ</button>
+      <nav class="nav-links" id="site-nav" aria-label="Основная навигация">
+        <a href="#about">ОБО МНЕ</a>
+        <a href="#projects">ПРОЕКТЫ</a>
+        <a href="#capabilities">НАВЫКИ</a>
+        <a class="nav-contact" href="#contact">СВЯЗАТЬСЯ ↗</a>
       </nav>
-      <button class="menu" id="menu" aria-label="Открыть меню" aria-expanded="false">МЕНЮ</button>
     </div>
   </header>
+
   <main>
-    <div class="wrap hero" id="home">
+    <section class="wrap hero" id="home">
       <div class="hero-copy">
-        <div class="eyebrow">Frontend Developer · n0phase</div>
-        <h1>Создаю<br><span>цифровой</span><br>опыт.</h1>
-        <p class="lead">Разрабатываю современные сайты с вниманием к деталям, удобству и визуальной системе. От идеи и структуры — до готового интерфейса.</p>
-        <div class="actions"><a class="btn primary" href="#projects">Смотреть проекты <span>↗</span></a><a class="btn" href="#contact">Обсудить проект</a></div>
-        <div class="hero-meta"><span><b>01</b> / Разработка</span><span><b>02</b> / Дизайн</span><span><b>03</b> / Реализация</span></div>
+        <div class="hero-kicker"><span class="live-dot"></span> FRONTEND DEVELOPER <span>/</span> n0phase</div>
+        <h1>Создаю<br><span class="accent">цифровой</span><br><span class="outline">опыт.</span></h1>
+        <p class="hero-description">Проектирую и разрабатываю веб-интерфейсы, в которых визуальная идея встречается с функциональностью. От первого наброска до работающего продукта.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Смотреть проекты <span>↗</span></a>
+          <a class="button button-ghost" href="#contact">Обсудить идею</a>
+        </div>
+        <div class="hero-footnote">
+          <span><b>01</b> DEVELOPMENT</span>
+          <span><b>02</b> DESIGN</span>
+          <span><b>03</b> CREATION</span>
+        </div>
       </div>
-      <div class="visual" aria-hidden="true"><div class="orbit"><div class="core">n<span>0</span></div><i class="cross"></i></div><div class="orbit-label">CODE. DESIGN. CREATE.</div></div>
-    </div>
-    <div class="redline"></div>
-    <section id="about"><div class="wrap">
-      <div class="section-head"><div><div class="eyebrow">01 / Профиль</div><h2>Обо мне</h2></div><p>Технологичный подход, чистая реализация и стремление постоянно улучшать результат.</p></div>
-      <div class="about-grid">
-        <article class="about-card"><h3>Привет, я n0phase.</h3><p>Frontend-разработчик. Создаю адаптивные веб-сайты и интерфейсы, работаю над собственными проектами и помогаю другим воплощать их идеи в интернете.</p><p>В работе уделяю внимание структуре, производительности, визуальной целостности и тому, как сайт ощущается на реальных устройствах.</p><div class="tags"><span class="tag">WEB DEVELOPMENT</span><span class="tag">UI / UX</span><span class="tag">RESPONSIVE</span></div></article>
-        <div class="stat-grid"><div class="stat"><strong>01</strong><span>Персональный подход</span></div><div class="stat"><strong>02</strong><span>Адаптивность</span></div><div class="stat"><strong>03</strong><span>Внимание к деталям</span></div><div class="stat"><strong>∞</strong><span>Развитие и практика</span></div></div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-coordinate">52° / N0PHASE / DIGITAL SPACE</div>
+        <div class="art-frame">
+          <span class="art-cross"></span>
+          <div class="art-word">n<span>0</span></div>
+          <div class="art-label">CODE. DESIGN. CREATE.</div>
+        </div>
       </div>
-    </div></section>
-    <section id="projects"><div class="wrap">
-      <div class="section-head"><div><div class="eyebrow">02 / Избранное</div><h2>Проекты</h2></div><p>Практика, эксперименты и реальные задачи. У каждого проекта своя цель и контекст.</p></div>
-      <div class="projects">
-        <article class="project"><div class="project-art"><strong>WHITE <span>GUN</span></strong></div><div class="project-body"><div class="project-top"><h3>WHITE GUN</h3><span class="status">ЛИЧНЫЙ ПРОЕКТ</span></div><p>Сайт собственной киберспортивной организации по Standoff 2.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JAVASCRIPT</span></div><p><a href="https://whitegun.pages.dev/" target="_blank" rel="noopener noreferrer">Открыть проект ↗</a></p></div></article>
-        <article class="project"><div class="project-art"><strong>FIT<span>NESS</span></strong></div><div class="project-body"><div class="project-top"><h3>FITNESS</h3><span class="status">ЛИЧНЫЙ ПРОЕКТ</span></div><p>Веб-проект в тематике фитнеса и физической активности.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JAVASCRIPT</span></div><p><a href="https://vanil-kwon.github.io/fitness/" target="_blank" rel="noopener noreferrer">Открыть проект ↗</a></p></div></article>
-        <article class="project"><div class="project-art"><strong>IFORZE <span>ESPORTS</span></strong></div><div class="project-body"><div class="project-top"><h3>IFORZE eSports</h3><span class="status">В РАЗРАБОТКЕ</span></div><p>Сайт для сторонней киберспортивной организации. Проект находится в разработке.</p><div class="tags"><span class="tag">WEB DESIGN</span><span class="tag">FRONTEND</span></div></div></article>
-        <article class="project"><div class="project-art"><strong>n0<span>phase</span></strong></div><div class="project-body"><div class="project-top"><h3>n0phase Portfolio</h3><span class="status">ПОРТФОЛИО</span></div><p>Личное пространство для презентации работ, навыков и направления развития.</p><div class="tags"><span class="tag">DESIGN SYSTEM</span><span class="tag">RESPONSIVE</span></div></div></article>
+      <span class="hero-side-index" aria-hidden="true">INDEPENDENT CREATIVE DEVELOPER — 2026</span>
+    </section>
+    <div class="red-rule"></div>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><div class="eyebrow">01 / PROFILE</div><h2 class="section-title">За идеей —<br>точная реализация.</h2></div>
+          <p class="section-description">Создание цифрового продукта — это не только код. Это система решений, в которой каждая деталь работает на общий результат.</p>
+        </div>
+        <div class="about-layout">
+          <article class="about-main reveal">
+            <h3>Я n0phase.<br>Frontend-разработчик.</h3>
+            <p>Разрабатываю современные сайты и интерфейсы, экспериментирую с визуальными системами и развиваю собственные цифровые проекты. Мне важны ясная структура, производительность, адаптивность и характер дизайна.</p>
+            <p>Использую технологии веба и AI-инструменты как рабочие средства — чтобы быстрее проверять идеи и уделять больше внимания качеству результата.</p>
+            <div class="about-tags"><span>WEB DEVELOPMENT</span><span>UI / UX</span><span>RESPONSIVE</span><span>CREATIVE CODE</span></div>
+          </article>
+          <div class="about-aside">
+            <div class="metric reveal"><strong>01</strong><span>Персональный подход</span></div>
+            <div class="metric reveal"><strong>02</strong><span>Адаптивные интерфейсы</span></div>
+            <div class="metric reveal"><strong>03</strong><span>Внимание к деталям</span></div>
+            <div class="metric reveal"><strong>∞</strong><span>Постоянное развитие</span></div>
+          </div>
+        </div>
       </div>
-    </div></section>
-    <section id="skills"><div class="wrap">
-      <div class="section-head"><div><div class="eyebrow">03 / Инструменты</div><h2>Навыки</h2></div><p>Основной фокус — frontend-разработка и создание понятных цифровых интерфейсов.</p></div>
-      <div class="skills">
-        <article class="skill-card"><span class="number">01 / CODE</span><h3>HTML</h3><p>Семантическая структура страниц.</p></article>
-        <article class="skill-card"><span class="number">02 / STYLE</span><h3>CSS</h3><p>Стилизация, адаптивность и анимации.</p></article>
-        <article class="skill-card"><span class="number">03 / LOGIC</span><h3>JavaScript</h3><p>Интерактивность и логика интерфейсов.</p></article>
-        <article class="skill-card"><span class="number">04 / VERSION</span><h3>Git & GitHub</h3><p>Контроль версий и публикация проектов.</p></article>
-        <article class="skill-card"><span class="number">05 / DESIGN</span><h3>UI / UX</h3><p>Визуальная и функциональная организация.</p></article>
-        <article class="skill-card"><span class="number">06 / LAYOUT</span><h3>Адаптивная вёрстка</h3><p>Интерфейсы для мобильных и десктопов.</p></article>
-        <article class="skill-card"><span class="number">07 / STRUCTURE</span><h3>ES Modules</h3><p>Организация кода на модули.</p></article>
-        <article class="skill-card"><span class="number">08 / TOOLS</span><h3>AI-инструменты</h3><p>Ускорение разработки и прототипирования.</p></article>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><div class="eyebrow">02 / SELECTED WORKS</div><h2 class="section-title">Избранные<br>проекты.</h2></div>
+          <div><p class="section-description">Личные эксперименты, собственные продукты и задачи для других команд.</p><div class="projects-toolbar"><strong id="project-count">00</strong> / PROJECTS IN CATALOG</div></div>
+        </div>
+        <div class="project-grid" id="project-grid" aria-live="polite">
+          <noscript>Для просмотра каталога проектов включите JavaScript.</noscript>
+        </div>
+        <p class="project-note">Новые работы добавляются через отдельный каталог проектов — без изменения разметки страницы.</p>
       </div>
-    </div></section>
-    <section id="contact"><div class="wrap">
-      <div class="section-head"><div><div class="eyebrow">04 / Контакт</div><h2>Есть идея?</h2></div><p>Открыт к новым проектам и сотрудничеству. Напиши, чтобы обсудить задачу.</p></div>
-      <div class="contact-grid"><div class="contact-card"><div class="eyebrow">Начнём с сообщения</div><h3>Создадим что-то<br>работающее.</h3><p>Опиши свою идею, задачу или проект. Обсудим детали и возможный формат работы.</p><a class="btn primary" href="https://t.me/n0phase" target="_blank" rel="noopener noreferrer">Написать в Telegram ↗</a></div>
-        <div class="contact-card"><div class="eyebrow">Связь и профили</div><div class="contact-links"><a href="https://t.me/n0phase" target="_blank" rel="noopener noreferrer">TELEGRAM <span>@n0phase ↗</span></a><a href="https://vk.com/n0phase" target="_blank" rel="noopener noreferrer">ВКонтакте <span>@n0phase ↗</span></a><a href="mailto:kwnvanil@gmail.com">EMAIL <span>kwnvanil@gmail.com ↗</span></a><a href="https://github.com/vanil-kwon" target="_blank" rel="noopener noreferrer">GITHUB <span>vanil-kwon ↗</span></a></div></div>
+    </section>
+
+    <section class="section" id="capabilities">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><div class="eyebrow">03 / TOOLKIT</div><h2 class="section-title">Инструменты<br>и подход.</h2></div>
+          <p class="section-description">Технологии и навыки, которые помогают превращать идеи в доступные и удобные веб-продукты.</p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability reveal"><span class="capability-number">01 / STRUCTURE</span><h3>HTML5</h3><p>Семантическая разметка и доступная структура.</p></article>
+          <article class="capability reveal"><span class="capability-number">02 / VISUAL</span><h3>CSS</h3><p>Сетки, адаптивность, визуальные системы и анимации.</p></article>
+          <article class="capability reveal"><span class="capability-number">03 / LOGIC</span><h3>JavaScript</h3><p>Интерактивность, логика и ES Modules.</p></article>
+          <article class="capability reveal"><span class="capability-number">04 / WORKFLOW</span><h3>Git & GitHub</h3><p>Контроль версий и публикация проектов.</p></article>
+          <article class="capability reveal"><span class="capability-number">05 / EXPERIENCE</span><h3>UI / UX</h3><p>Понятная навигация и пользовательские сценарии.</p></article>
+          <article class="capability reveal"><span class="capability-number">06 / DEVICES</span><h3>Responsive</h3><p>Интерфейсы для мобильных и больших экранов.</p></article>
+          <article class="capability reveal"><span class="capability-number">07 / THINKING</span><h3>Problem solving</h3><p>Декомпозиция задач и поиск эффективных решений.</p></article>
+          <article class="capability reveal"><span class="capability-number">08 / ASSIST</span><h3>AI tools</h3><p>Прототипирование и ускорение разработки.</p></article>
+        </div>
       </div>
-    </div></section>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="contact-panel reveal">
+          <div class="contact-main">
+            <div class="eyebrow">04 / CONTACT</div>
+            <h2>Есть задача?<br><span style="color:var(--red-bright)">Обсудим.</span></h2>
+            <p>Открыт к новым проектам, сотрудничеству и интересным идеям. Напиши мне — обсудим задачу и возможный формат работы.</p>
+            <a class="button button-primary" href="https://t.me/n0phase" target="_blank" rel="noopener noreferrer">Написать в Telegram ↗</a>
+          </div>
+          <div class="contact-list">
+            <a href="https://t.me/n0phase" target="_blank" rel="noopener noreferrer"><span>TELEGRAM</span><span>@n0phase ↗</span></a>
+            <a href="https://vk.com/n0phase" target="_blank" rel="noopener noreferrer"><span>ВКонтакте</span><span>@n0phase ↗</span></a>
+            <a href="mailto:kwnvanil@gmail.com"><span>EMAIL</span><span>Написать ↗</span></a>
+            <a href="https://github.com/vanil-kwon" target="_blank" rel="noopener noreferrer"><span>GITHUB</span><span>vanil-kwon ↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="wrap"><span>© <span id="year"></span> n0phase. Все права защищены.</span><span>CODE. DESIGN. CREATE.</span></footer>
-  <script>
-    const menu=document.getElementById('menu');const links=document.getElementById('navlinks');
-    menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'ЗАКРЫТЬ':'МЕНЮ'});
-    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='МЕНЮ'}));
-    document.getElementById('year').textContent=new Date().getFullYear();
-  </script>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="footer-brand" href="#home">n0<span>phase</span></a>
+      <span class="footer-meta">© <span id="year"></span> N0PHASE — CODE. DESIGN. CREATE.</span>
+      <span class="footer-meta">BUILT WITH INTENTION.</span>
+    </div>
+  </footer>
 </body>
 </html>
