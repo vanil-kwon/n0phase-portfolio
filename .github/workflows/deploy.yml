@@ -1,4 +1,4 @@
-name: Deploy site from ZIP
+name: Deploy n0phase portfolio
 
 on:
   push:
@@ -10,20 +10,25 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
 jobs:
   deploy:
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Unzip site
+      - name: Prepare website
         run: |
-          ZIP_FILE=$(find . -maxdepth 2 -iname "*.zip" | head -n 1)
           mkdir -p site
-          unzip -o "$ZIP_FILE" -d site
+          cp index.html site/
+          cp -R assets site/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
