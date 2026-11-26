@@ -39,7 +39,7 @@ export const projects = [
     url: "https://vanil-kwon.github.io/fitness/",
     repo: "https://github.com/vanil-kwon/fitness",
     status: "Опубликован",
-    stack: ["JavaScript", "PWA", "Supabase"]
+    stack: ["JavaScript", "PWA", "Chart.js"]
   },
   {
     title: "IFORZE ESPORTS",
